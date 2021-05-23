@@ -322,6 +322,17 @@ else if (pid == 0)
 ```
 Namun letak perbedaaan memanggil nya menggunakan IPC PIPES, yaitu pada fungsi 1, itu memanggil pipe1 dan fork, namun untuk fungsi 2, yaitu memanggil pipe2 dan fork. dan untuk fungsi 3 tidak perlu memannggil pipe1/pipe2 hanya menggunakan fork. <br/>
 
+### Kendala
+kendala yang saya kerjakan pada soal ini, terletak pada soal2b yaitu kendala dalam membandingkan 2 buah matriks dan sesuai dengan ketentuan faktorialnya. <br/>
+
+### Output
+Output Soal 2a <br/>
+![alt text](https://github.com/migellamp/ss_soal1/blob/main/2a.png) <br />
+Output Soal 2b <br/>
+![alt text](https://github.com/migellamp/ss_soal1/blob/main/2b.png) <br />
+Output Soal 2c <br/>
+![alt text](https://github.com/migellamp/ss_soal1/blob/main/2b.png) <br />
+
 ----------------------
 
 ### Soal 3
