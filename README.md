@@ -1,6 +1,60 @@
 ### Laporan Resmi Soal Shift Modul 3 (D07)
 
 ----------------------
+### Soal 1
+### A. Program menu untuk login dan register
+program login memiliki fungsi ```int login (int fd)``` fungsi ini digunakan untuk mengambil input dari client dan mencocokan dengan database yang ada pada ```akun.txt``` dengan menggunakan iterasi while hingga ```EOF``` lalu cocokan baris yang ada dengan inputan dari client dengan ```strcmp``` jika dari semua baris yang ada tersebu terdapa line yang cocok maka user berhasil login.
+```
+int login(int fd){
+	char id[SIZE], pass[SIZE], tmp[SIZE], tmp1[SIZE];
+	int flag = 0, login = 0;
+
+	FILE *akun = fopen("akun.txt", "a+");
+
+	printf("login\n");
+	printf("%s", tmp);
+
+	getinput(fd, "Id : ", id);
+	getinput(fd, "Pass : ", pass);
+	sprintf(tmp ,"%s:%s", id,pass);
+
+	printf("%s", tmp);
+
+	while (fscanf(akun, "%s", tmp1) != EOF) {
+		login = strcmp(tmp,tmp1);
+		printf("%s = %s %d\n",tmp,tmp1,login);
+        	if (login == 0){
+			flag = 1;
+			printf("client succes login\n");
+			send(fd, "Login Succes\n", DATA_BUFFER, 0);
+			return 1;
+		}
+   	}
+	if (flag == 0 ) send(fd, "Login Failed\n", DATA_BUFFER, 0);
+
+	fclose(akun);
+	return -1;
+}
+```
+
+program register memiliki fungsi ```register( int fd) ``` fungsi ini digunakan untuk mengambil input dari client dan hasil inputan tersebut kedalam database ```akun.txt``` yang mana pada database tersebut memiliki format ```id:pass```.
+```
+void regis(int fd){
+	char id[SIZE], pass[SIZE], tmp[SIZE];
+
+	FILE *akun = fopen("akun.txt", "a+");
+
+	printf("regis\n");
+
+	getinput(fd, "Id : ", id);
+	getinput(fd, "Pass : ", pass);
+	fprintf(akun ,"%s:%s\n", id,pass);
+	printf("%s:%s\n", id,pass);
+	
+	fclose(akun);
+}
+```
+
 
 ### Soal 2
 ### A. Membuat program perkalian matrix (4x3 dengan 3x6) dan menampilkan hasilnya
