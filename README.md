@@ -54,6 +54,27 @@ void regis(int fd){
 	fclose(akun);
 }
 ```
+### B. Database dan Folder FILES
+untuk pembuatan Databse dan folder ```FILES``` dilakukan pada fungsi ```void regis(int fd).
+```
+void regis(int fd){
+	char id[SIZE], pass[SIZE], tmp[SIZE];
+
+	FILE *akun = fopen("akun.txt", "a+");
+
+	printf("regis\n");
+
+	getinput(fd, "Id : ", id);
+	getinput(fd, "Pass : ", pass);
+	fprintf(akun ,"%s:%s\n", id,pass);
+	printf("%s:%s\n", id,pass);
+	
+	fclose(akun);
+}
+```
+
+### C. Add files
+pada problem tersebut kita diminta untuk membuat program yang berfungsi untuk menambahkan file yang telah dikirimkan oleh client 
 
 
 ### Soal 2
