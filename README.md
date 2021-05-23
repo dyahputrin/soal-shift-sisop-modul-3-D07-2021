@@ -331,7 +331,7 @@ Output Soal 2a <br/>
 Output Soal 2b <br/>
 ![alt text](https://github.com/migellamp/ss_soal1/blob/main/2b.png) <br />
 Output Soal 2c <br/>
-![alt text](https://github.com/migellamp/ss_soal1/blob/main/2b.png) <br />
+![alt text](https://github.com/migellamp/ss_soal1/blob/main/2c.png) <br />
 
 ----------------------
 
