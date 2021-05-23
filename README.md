@@ -231,7 +231,7 @@ void main()
     shmctl(shmid, IPC_RMID, NULL);
 }
 ```
-### c. Membuat program untuk mengecek 5 proses teratas apa saja yang memakan resource komputernya dengan command “ps aux | sort -nrk 3,3 | head -5”
+### C. Membuat program untuk mengecek 5 proses teratas apa saja yang memakan resource komputernya dengan command “ps aux | sort -nrk 3,3 | head -5”
 Terdapat 3 Fungsi yaitu f1, f2, f3 <br/>
 Fungsi f1: <br/>
 ```
